@@ -1,0 +1,175 @@
+$mainColor: #595E6A;
+
+@font-face {
+    font-family: SansNarrow;
+    src: url("../../fonts/PT_Sans_Narrow.ttf");
+}
+
+.second-link {
+    margin: 3em 2em;
+    font-size: 1.5rem;
+
+    & > form {
+
+        font-family: SansNarrow;
+        
+        & > div:first-of-type, p {
+            color: $mainColor;
+
+            & > span {
+
+                &:first-child {
+                    color: lighten($mainColor, 40%);
+                }
+                
+                & span {
+                    margin-left: 50px;
+                }
+            }
+        }
+
+        button {
+            margin: 2em 0;
+            width: 20%;
+            padding: 10px;
+            font-size: 1rem;
+            font-weight: bolder;
+            border: none;
+            border-radius: 3px;
+            color: #FDFEFB;
+            background-color: #95BF00;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &:focus {
+                outline: none;
+            }
+
+            &:active {
+                transition: .5s;
+                transform: scale(.9);
+            }
+        }
+
+        & > h2 {
+            margin: 1em auto;
+        }
+
+        & > div:last-of-type {
+            display: flex;
+            font-size: 1.3rem;
+
+            & label {
+                margin-left: .6em;
+                color: lighten($mainColor, 25%);
+                display: block;
+            }
+            
+            & > div:first-child {
+                background-color: #FFFFFF;
+                border-radius: 10px;
+                padding: 1em;
+                
+                input, select {
+                    margin: 1em;
+                    height: 40px;
+                    font-size: 1rem;
+                    color: lighten($mainColor, 25%);
+                    background-color: #1F2229;
+
+                    &:focus::-webkit-input-placeholder { color: transparent; }
+                    &:focus:-moz-placeholder { color: transparent; }
+                    &:focus::-moz-placeholder { color: transparent; }
+                    &:focus:-ms-input-placeholder { color: transparent; }
+                }
+
+                & > div.validity {
+                    select {
+                        padding-left: 1%;
+                        min-width: 10%;
+
+                        &:hover {
+                            cursor: text;
+                        }
+                    }
+                }
+
+                & > div.card-number {
+
+                    & > input {
+                        width: 15%;
+                        text-align: center;
+
+                        &:focus {
+                            outline: none;
+                        }
+
+                        &.error {
+                            border: 3px solid #ff6347;
+                        }
+                    }
+                }
+
+                & > div:last-child {
+                    & > input {
+                        width: 96%;
+                        padding: 10px;
+                        color: #B9C1CA;
+                        
+                        &.error {
+                            border: 3px solid #ff6347;
+                        }
+
+                        &:focus {
+                            outline: none;
+                        }
+    
+                        &::placeholder {
+                            font-size: 1rem;
+                            color: #B9C1CA;
+                        }
+                    }
+                }
+            }
+
+            & > div:last-child {
+
+                & > div:first-child {
+                    margin: 3em auto 1em;
+                    width: 100%;
+                    height: 40px;
+                    background-color: #E4E9EE;
+                }
+
+                & > div:last-child {
+                    margin-left: 5em;
+                    width: 60%;
+                    
+                    input {
+                        font-size: 1rem;
+                        color: lighten($mainColor, 25%);
+                        background-color: #1F2229;
+                        height: 40px;
+                        width: 90%;
+                        text-align: center;
+                        background-image: url('../../img/question-mark.png');
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        background-position: 100% 0;
+
+                        &.error {
+                            border: 3px solid #ff6347;
+                        }
+
+                        &:focus {
+                            outline: none;
+                            background-image: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

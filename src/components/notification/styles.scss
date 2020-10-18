@@ -1,0 +1,12 @@
+.success-notify {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    font-size: 3rem;
+    color: #fffff0;
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgba(148, 189, 0, .75);
+}

@@ -1,0 +1,102 @@
+$mainColor: #1F2229;
+$secondColor: #193945;
+$thirdColor:  #9A47B9;
+$activeLinkColor: #2A2D37;
+$indent: 22px;
+
+@font-face {
+    font-family: CenturyGothic;
+    src: url("../../../fonts/Century_Gothic.ttf");
+}
+
+.layout {
+
+    margin: auto;
+    width: 80%;
+
+    & > div {
+
+        display: flex;
+        justify-content: center;
+
+        & > div:first-child {
+            width: 25%;
+            height: 30em;
+            padding: 0;
+            font-family: CenturyGothic;
+            background-color: $mainColor;
+
+            & > p {
+                color: $thirdColor;
+                margin: $indent*2 $indent;
+
+                & span {
+                    margin-right: .5em;
+                    padding: ceil($indent/2);
+                    color: $mainColor;
+                    background-color: $thirdColor;
+                }
+            }
+
+            & > div {
+                margin: 0;
+                padding: 0;
+                font-size: 1.5rem;
+                color: #FBFBFB;
+                list-style-type: none;
+
+                & a {
+                    display: block;
+                    width: 100%;
+                    background-color: inherit;
+                    line-height: 30px;
+                    padding: $indent;
+                    text-transform: capitalize;
+                    -webkit-border-radius: 3px;
+                    -moz-border-radius: 3px;
+                    border-radius: 3px;
+                }
+
+                & a.active {
+                    background-color: #2A2D37;
+                    
+                    & + a {
+                        background-color: darken($activeLinkColor, 2%);
+                    }
+                }
+            }
+        }
+
+        & > div:last-child {
+            width: 75%;
+            height: auto;
+            background-color: #F7F8F8;;
+        }
+    }
+
+    & header {
+        width: 100%;
+        padding: 2em 1em 1em;
+        font-size: 2em;
+        font-family: CenturyGothic;
+        color: $secondColor;
+        background-color: #00AEEF;
+
+        & > div {
+            margin-top: .5em;
+            color: lighten($secondColor, 10%);
+            font-size: 1.5rem;
+            font-weight: 600;
+            white-space: pre-line;
+        }
+    }
+
+    & footer {
+        width: 100%;
+        color: #787E8A;
+        background-color: #373C43;
+        padding: 2em;
+        font-family: Georgia, 'Times New Roman', Times, serif;;
+        white-space: pre-line;
+    }
+}
