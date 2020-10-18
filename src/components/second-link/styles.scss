@@ -173,3 +173,62 @@ $mainColor: #595E6A;
         }
     }
 }
+
+@media screen and (max-width: 1120px) {
+    .second-link {
+        & > form {
+            font-size: 1rem;
+
+            button {
+                width: 30%;
+                padding: 5px;
+            }
+
+            & > div:last-of-type {
+                flex-wrap: wrap;
+                justify-content: center;
+                font-size: 1rem;
+    
+                & > div:first-child {
+                    min-width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .second-link {
+        & > form {
+            font-size: 1rem;
+
+            button {
+                width: 30%;
+                padding: 5px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .second-link {
+        & > form {
+            font-size: 1rem;
+
+            button {
+                width: 50%;
+                padding: 5px;
+            }
+
+            & > div:last-of-type {
+    
+                & > div:first-child {
+                    
+                    input, select {
+                        margin: 3px;
+                    }
+                }
+            }
+        }
+    }
+}

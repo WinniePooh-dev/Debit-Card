@@ -100,3 +100,34 @@ $indent: 22px;
         white-space: pre-line;
     }
 }
+
+@media screen and (max-width: 1250px) {
+
+    .layout {
+        & > div {
+    
+            & > div:first-child {
+    
+                & > div {
+    
+                    & a {
+                        font-size: 1rem;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .layout {
+        & > div {
+            font-size: .5rem;
+
+            & > div:first-child {
+                height: 80em;
+            }
+        }
+    }
+}
